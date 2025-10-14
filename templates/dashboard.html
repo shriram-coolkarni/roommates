@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Dashboard</title></head>
+<body>
+  <h2>Welcome, {{ user.username }}</h2>
+  <p>Total Expenses: ₹{{ total }}</p>
+  <a href="/add_expense">Add Expense</a> | <a href="/logout">Logout</a>
+  <h3>Your Expenses</h3>
+  <ul>
+    {% for e in expenses %}
+      <li>₹{{ e.amount }} - {{ e.description }} ({{ e.date }})</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
